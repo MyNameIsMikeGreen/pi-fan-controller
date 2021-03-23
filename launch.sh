@@ -20,7 +20,7 @@ pip3 install -r requirements.txt
 
 
 echo "Launching Pi Fan Controller..."
-python3 main.py
+python3 main.py >> ${LOG_FILE}
 
 
 echo "Performing environment teardown..."
