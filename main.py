@@ -1,5 +1,6 @@
 import logging
 import subprocess
+import sys
 import time
 
 from gpiozero import OutputDevice
@@ -36,7 +37,7 @@ def main():
     Turns fan on if temperature passes upper threshold.
     Turns fan off if temperature passes lower threshold.
     """
-    logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s | %(name)s | %(levelname)s | %(message)s")
+    logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s | %(levelname)s | %(message)s", stream=sys.stdout)
     logging.info("Fan controller started.")
     if OFF_THRESHOLD_CELSIUS >= ON_THRESHOLD_CELSIUS:
         raise RuntimeError('OFF_THRESHOLD_CELSIUS must be less than ON_THRESHOLD_CELSIUS')
