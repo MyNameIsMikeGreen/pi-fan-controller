@@ -140,3 +140,6 @@ cython_debug/
 # IntelliJ
 .idea/
 *.iml
+
+# Mac
+.DS_Store
